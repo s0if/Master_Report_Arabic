@@ -1,0 +1,230 @@
+# Create a Final Unified Arabic HTML report (no references to 3 separate files, everything merged into one comprehensive
+report)
+
+final_report_html = """
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <title>التقرير النهائي — سيف الدين كومي</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      margin: 36px;
+      color: #0f172a;
+      line-height: 1.8;
+    }
+
+    header {
+      border-right: 6px solid #0ea5a4;
+      padding-right: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #0f766e;
+      margin: 0 0 6px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #0e7490;
+      margin: 14px 0;
+      border-right: 4px solid #0e7490;
+      padding-right: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #155e75;
+      margin: 10px 0;
+    }
+
+    p {
+      margin: 6px 0;
+    }
+
+    .meta {
+      background: #f0fdfa;
+      border: 1px solid #99f6e4;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    ul {
+      margin: 8px 0 12px 0;
+      padding-right: 18px;
+    }
+
+    a {
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      border: 1px solid #e6f6f4;
+      padding: 12px;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      margin-bottom: 14px;
+    }
+
+    .small {
+      color: #475569;
+      font-size: 13px;
+    }
+
+    .cta {
+      background: #0ea5a4;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 8px;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 24px;
+      border-top: 1px dashed #e6f6f4;
+      padding-top: 12px;
+      color: #334155;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>التقرير النهائي — سيف الدين كومي</h1>
+    <div class="meta">
+      <strong>المسمى الوظيفي:</strong> مطوّر واجهة خلفية (Back-End) — ASP.NET Core / SQL Server<br>
+      <strong>المكان:</strong> فلسطين — Palestine Polytechnic University (2021–2025)<br>
+      <strong>البريد:</strong> <a href="mailto:saifalkomi@gmail.com">saifalkomi@gmail.com</a><br>
+      <strong>GitHub:</strong> <a href="https://github.com/s0if" target="_blank">github.com/s0if</a><br>
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saif-aldin-komi"
+        target="_blank">linkedin.com/in/saif-aldin-komi</a>
+    </div>
+  </header>
+
+  <div class="section">
+    <h2>مقدمة</h2>
+    <p>أنا <strong>سيف الدين كومي</strong>، مطوّر برمجيات متخصص في الواجهة الخلفية باستخدام <strong>ASP.NET
+        Core</strong> و<strong>SQL Server</strong>.
+      أحرص على بناء أنظمة قابلة للتوسع، آمنة، وقابلة للصيانة. خلال مسيرتي الأكاديمية والعملية، عملت على مشاريع متعددة
+      وتدريب متخصص
+      ركّز على <strong>Clean Architecture</strong> ومبادئ <strong>SOLID</strong>. هذا التقرير يوضح أبرز إنجازاتي،
+      المهارات التي اكتسبتها، والتحديات التي واجهتها.</p>
+  </div>
+
+  <div class="section">
+    <h2>المشاريع والتدريب</h2>
+
+    <div class="card">
+      <h3>مشروع التخرج — Aqaraty (Back-End)</h3>
+      <p>نظام يربط مالكي العقارات ومقدمي الخدمات المهنية بالمستخدمين في فلسطين. ركّزت في هذا المشروع على بناء
+        <strong>واجهة خلفية قوية</strong> باستخدام ASP.NET Core 8، مع دعم للمصادقة باستخدام JWT، رفع الملفات عبر Azure
+        Blob،
+        وإضافة ميزات زمن حقيقي عبر SignalR.
+      </p>
+      <ul>
+        <li>تأمين الوصول: JWT و Identity.</li>
+        <li>خدمات سحابية: Azure Blob Storage و Azure SQL.</li>
+        <li>ميزات زمن حقيقي: محادثات وإشعارات عبر SignalR.</li>
+        <li>توثيق الخدمات: Swagger API Docs.</li>
+      </ul>
+      <p><strong>رابط المستودع:</strong> <a href="https://github.com/s0if/Graduation-project"
+          target="_blank">Graduation-project</a></p>
+    </div>
+
+    <div class="card">
+      <h3>HR Management System</h3>
+      <p>تطبيق ويب خفيف لإدارة بيانات الموظفين باستخدام <strong>ASP.NET Core 9</strong> و<strong>Entity Framework Core
+          9</strong>.
+        كان الهدف الأساسي تطبيق مبدأ <strong>N-Tier Architecture</strong> عملياً.</p>
+      <ul>
+        <li>إدارة الموظفين (CRUD كامل + بحث + تصفية).</li>
+        <li>تنظيم المشروع إلى طبقات (Presentation / BLL / DAL).</li>
+        <li>استخدام Mapster لتحويل الكيانات و DTOs.</li>
+        <li>تصميم واجهة بسيطة باستخدام Tailwind CSS.</li>
+      </ul>
+      <p><strong>رابط المستودع:</strong> <a href="https://github.com/s0if/HRManagementSystem.git"
+          target="_blank">HRManagementSystem</a></p>
+    </div>
+
+    <div class="card">
+      <h3>التدريب — Clean Architecture & SOLID</h3>
+      <p>خلال التدريب العملي، ركّزت على تطوير مهارات بناء أنظمة موثوقة باستخدام <strong>Clean Architecture</strong>
+        ومبادئ <strong>SOLID</strong>. ساعدني التدريب على تحسين أسلوب كتابة الكود
+        وتحويله من مجرد "كود يعمل" إلى "كود نظيف وقابل للصيانة".</p>
+      <ul>
+        <li>تطبيق Clean Architecture: فصل الاهتمامات بين Domain وInfrastructure وApplication.</li>
+        <li>تطبيق SOLID: Single Responsibility, Dependency Inversion، إلخ.</li>
+        <li>Refactoring وإعادة تنظيم الأكواد لمشاريع عملية.</li>
+        <li>استخدام Design Patterns أساسية (Repository, Unit of Work).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>المهارات المكتسبة</h2>
+    <ul>
+      <li><strong>البرمجة:</strong> C#, Python, JavaScript, SQL.</li>
+      <li><strong>الإطارات:</strong> ASP.NET Core (8 & 9), EF Core, React.js (أساسي).</li>
+      <li><strong>قواعد البيانات:</strong> SQL Server، تصميم مخططات محسّنة وفهارس.</li>
+      <li><strong>الأمن:</strong> JWT, Identity, Role-based Policies.</li>
+      <li><strong>المعماريات:</strong> Clean Architecture، N-Tier، SOLID.</li>
+      <li><strong>السحابة:</strong> Azure App Services، Azure SQL، Azure Blob Storage.</li>
+      <li><strong>الأدوات:</strong> Git/GitHub, Swagger, Postman, Serilog, Mapster.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>التحديات التي واجهتها</h2>
+    <ul>
+      <li>الالتزام الكامل بمبدأ Clean Code كان تحدياً في المشاريع الأولى.</li>
+      <li>تنظيم مجموعة Postman لم يكن بأفضل صورة، ما صعّب المشاركة مع الفريق.</li>
+      <li>فصل الاهتمامات بين الطبقات احتاج لإعادة هيكلة متكررة.</li>
+      <li>إضافة اختبارات آلية (Unit & Integration Tests) ما زالت بحاجة إلى تعزيز.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>خطة مستقبلية للتطوير</h2>
+    <ol>
+      <li>تعزيز كتابة Clean Code والالتزام بمبادئ SOLID بشكل أعمق.</li>
+      <li>توسيع تغطية الاختبارات الآلية وتحسين عمليات CI/CD.</li>
+      <li>تنظيم وثائق Postman وSwagger بأمثلة أكثر وضوحاً.</li>
+      <li>التعمق أكثر في Azure وخدمات السحابة الأخرى.</li>
+      <li>تطبيق أنماط تصميم (Design Patterns) متقدمة عند الحاجة.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>خاتمة</h2>
+    <p>هذا التقرير يلخص رحلتي في تطوير البرمجيات من خلال التدريب الأكاديمي والمشاريع العملية.
+      ركّزت فيه على أهم المهارات التي اكتسبتها والتحديات التي تغلّبت عليها،
+      وهو يعكس قدرتي على بناء أنظمة عملية باستخدام <strong>ASP.NET Core</strong>،
+      مع التزام بالمعايير الحديثة للبرمجة النظيفة والمعمارية السليمة.</p>
+  </div>
+
+  <footer>
+    <p class="small">أُعدّ هذا التقرير كوثيقة نهائية موحدة يمكن رفعها مباشرة كجزء من ملف التقديم أو الـPortfolio.</p>
+  </footer>
+
+</body>
+
+</html>
+"""
